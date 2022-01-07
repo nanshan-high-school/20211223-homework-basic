@@ -20,31 +20,31 @@ int main() {
     for(int j = 0; j < C; j++){
       if(blocks[i][j] == 0){
         int b = 0;
-        bool L = true, R = true, U = true, D = true;
-        if(i == 0){U = false;
-        }else if(i == R-1){D = false;}
-        if(j == 0){L = false;
-        }else if(j == C-1){R = false;}
+        bool l = true, r = true, u = true, d = true;
+        if(i == 0){u = false;}
+        if(i == R-1){d = false;}
+        if(j == 0){l = false;}
+        if(j == C-1){r = false;}
 
-        if(L){
+        if(l){
           if(left != 0){
             a[i][j] += left;
             b++;
           }
         }
-        if(R){
+        if(r){
           if(right != 0){
             a[i][j] += right;
             b++;
           }
         }
-        if(U){
+        if(u){
           if(up != 0){
             a[i][j] += up;
             b++;
           }
         }
-        if(D){
+        if(d){
           if(down != 0){
             a[i][j] += down;
             b++;
